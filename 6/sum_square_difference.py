@@ -1,3 +1,6 @@
+import time
+start = time.time()
+
 #Computes the difference between the square sum and the sum of squares of a number 'n'
 def sum_square_difference(n):
 
@@ -14,4 +17,4 @@ def sum_square_difference(n):
   return difference
 
 print(sum_square_difference(100))
-  
+print("--- %s seconds ---" % (time.time() - start))
