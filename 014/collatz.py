@@ -1,10 +1,12 @@
 from time import time
 start = time()
 
+#Finds the longest collats sequence.
+#SOptimized by skipping even starting numbers.
 def largestChain(x):
     largest_chain = 0
     number = 0
-    for n in range(2,x):
+    for n in range(3,x,2):
         chain = 1
         num = n
         while num != 1:
