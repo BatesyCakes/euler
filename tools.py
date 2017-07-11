@@ -1,6 +1,6 @@
 import math
 
-#finds divisors of a number
+#generates list of divisors of a number
 def divisorGen(n):
     divs = [1]
     for i in xrange(2,int(math.sqrt(n))+1):
