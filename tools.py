@@ -12,10 +12,16 @@ def divisorGen(n):
 
 # checks if a number is prime
 def isPrime(n):
-    for i in range(2, int(math.sqrt(x)+1)):
-        if n % i == 0:
-            return False;
-    return n>1;
+    if n < 2:
+        return False
+    elif n == 2:
+        return True
+    elif not n & 1:	# if n is even (and not 2)
+        return False
+    for x in range(3, int(math.sqrt(n))+1, 2):
+        if n % x == 0:
+            return False
+    return True
 
 #brute force generation of the nth prime number
 def primeGen(n):
