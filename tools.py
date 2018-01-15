@@ -28,10 +28,18 @@ def is_prime(n):
 
 def prime_gen(n):
     '''brute force generation of the nth prime number'''
-  primes = []
-  x = 2
-  while len(primes) < n:
-      if prime_check(x):
-          primes.append(x)
-      x += 1
-  return primes[-1]
+    primes = []
+    x = 2
+    while len(primes) < n:
+        if prime_check(x):
+            primes.append(x)
+        x += 1
+    return primes[-1]
+
+def is_pandigital(n):
+    '''check if a number is pandigital'''
+    x = sorted(str(n))
+    for i in range(1, len(x) + 1):
+        if x[i - 1] != str(i):
+            return False
+    return True
