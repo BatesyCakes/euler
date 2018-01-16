@@ -24,15 +24,14 @@ def is_prime(n):
     return True
 
 def main():
-    for x in range(987654321, 1234, -2):
+    for x in range(987654321, 1234567, -2):
         if is_pandigital(x):
             if is_prime(x):
                 print(x)
-                print("---%s seconds---"(t.time()-start))
+                print("---%s seconds---" %(t.time()-start))
                 break
             else:
                 continue
-    print("program complete")
 
 if __name__ == "__main__":
     main()
