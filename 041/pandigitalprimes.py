@@ -27,7 +27,7 @@ def main():
     for x in range(987654321, 1234, -2):
         if is_pandigital(x):
             if is_prime(x):
-                print(x + 'is the largest pandigital prime.')
+                print(x)
                 print("---%s seconds---"(t.time()-start))
                 break
             else:
