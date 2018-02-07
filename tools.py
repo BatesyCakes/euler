@@ -11,7 +11,6 @@ def divisor_gen(n):
     return list(set(divs))
 
 
-
 def is_prime(n):
     '''checks if a number is prime'''
     if n < 2:
@@ -27,14 +26,16 @@ def is_prime(n):
 
 
 def prime_gen(n):
-    '''brute force generation of the nth prime number'''
+    '''brute force generation of the nth prime number in conjunction with
+    is_prime() function'''
     primes = []
     x = 2
     while len(primes) < n:
-        if prime_check(x):
+        if is_prime(x):
             primes.append(x)
         x += 1
     return primes[-1]
+
 
 def is_pandigital(n):
     '''check if a number is pandigital'''
