@@ -1,4 +1,4 @@
-class Main {
+class naturals {
 
 	public static void main(String[] args) {
 		System.out.println(new Main().run());

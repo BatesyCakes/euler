@@ -1,7 +1,7 @@
-class Main {
+class maxprime {
 
 	public static void main(String[] args) {
-		System.out.println(new Main().run());
+		System.out.println(new maxprime().run());
 	}
 
 	public String run() {
