@@ -25,16 +25,13 @@ def is_prime(n):
     return True
 
 
-def prime_gen(n):
-    '''brute force generation of the nth prime number in conjunction with
-    is_prime() function'''
-    primes = []
-    x = 2
-    while len(primes) < n:
-        if is_prime(x):
-            primes.append(x)
-        x += 1
-    return primes[-1]
+def primes_gen(n):
+    '''Returns a list of primes up to n'''
+    sieve = [True] * n
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i]:
+            sieve[i*i::2*i]=[False]*((n-i*i-1)/(2*i)+1)
+    return [2] + [i for i in range(3,n,2) if sieve[i]]
 
 
 def is_pandigital(n):
