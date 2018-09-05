@@ -6,13 +6,14 @@ def pentagonal_generator(n):
   pentagonal = (number*(3*number - 1))/2
   return pentagonal
 
+'''
 def is_pentagonal(x):
   n = (sqrt(24*x + 1) + 1)/6
   if n%2 == 0:
     return True
   else:
     return False
-
+'''
 
 def main():
 
