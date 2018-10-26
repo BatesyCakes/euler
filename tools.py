@@ -44,3 +44,31 @@ def is_pandigital(n):
         if x[i - 1] != str(i):
             return False
     return True
+
+def pascals_triangle(n):
+    '''returns pascals triangle up to n rows'''
+    rows = [[1]]
+    for _ in range(1, n+1):
+        rows.append([1] +
+                    [sum(pair) for pair in zip(rows[-1], rows[-1][1:])] +
+                    [1])
+    return rows
+
+def pascals_row(n):
+    '''generates the nth row of Pascal's triangle. The first row is n=0'''
+  row = [1]
+  if n > 0:
+    for i in range(1,n+1):
+      num = row[i-1] * (n + 1 - i)/i
+      row.append(num)
+    return row
+  else:
+    return row
+
+def base_conversion(num,b):
+  '''converts integer in base 10 to integer in base b'''
+  convStr = "0123456789abcdefghijklmnopqrstuvwxyz"
+  if num < b:
+      return convStr[num]
+  else:
+      return conv(num//b, b) + convStr[num%b]
