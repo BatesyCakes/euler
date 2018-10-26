@@ -65,10 +65,12 @@ def pascals_row(n):
   else:
     return row
 
-def base_conversion(num,b):
-  '''converts integer in base 10 to integer in base b'''
-  convStr = "0123456789abcdefghijklmnopqrstuvwxyz"
-  if num < b:
-      return convStr[num]
-  else:
-      return conv(num//b, b) + convStr[num%b]
+def numberToBase(n, b):
+    '''converts integer n to any base b'''
+    if n == 0:
+        return [0]
+    digits = []
+    while n:
+        digits.append(int(n % b))
+        n //= b
+    return digits[::-1]
