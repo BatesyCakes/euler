@@ -37,6 +37,15 @@ def prime_list(n):
     return primes
 
 
+def digit_sum(n):
+    '''sums the digits of a given number'''
+  summation = 0
+  number = str(n)
+  for i in number:
+    summation += int(i)
+  return summation
+
+
 def is_pandigital(n):
     '''check if a number is pandigital'''
     x = sorted(str(n))
