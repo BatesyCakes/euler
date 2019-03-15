@@ -1,5 +1,19 @@
 import math
 
+def sieve_of_eratosthenes(n):
+    '''returns a list of prime numbers up to n'''
+    sieve = [True for _ in range(n + 1)]
+    sieve[0:1] = [False, False]
+    for start in range(2, n + 1):
+        if sieve[start]:
+            for i in range(2 * start, n + 1, start):
+                sieve[i] = False
+    primes = []
+    for i in range(2, n + 1):
+        if sieve[i]:
+            primes.append(i)
+    return primes
+
 
 def divisor_gen(n):
     '''generates list of divisors of a number'''
